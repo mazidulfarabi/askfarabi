@@ -8,7 +8,7 @@ exports.handler = async function(event, context) {
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
-      model: "mistralai/mistral-7b-instruct",
+      model: "meta-llama/llama-3-8b-instruct",
       messages: [
         { role: "system", content: "You are a helpful assistant." },
         { role: "user", content: message }
