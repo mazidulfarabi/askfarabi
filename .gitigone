@@ -1,0 +1,8 @@
+# Ignore environment variables file
+.env
+
+# Node modules (if any)
+node_modules/
+
+# Netlify local dev folder
+.netlify/
