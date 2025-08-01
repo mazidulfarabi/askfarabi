@@ -8,7 +8,7 @@ exports.handler = async function(event, context) {
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
-      model: "meta-llama/llama-3.3-70b-instruct:free",
+      model: "google/gemini-2.0-flash-exp:free",
       messages: [
         { role: "system", content: "You are a helpful assistant." },
         { role: "user", content: message }
