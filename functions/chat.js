@@ -8,7 +8,7 @@ exports.handler = async function(event, context) {
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
-      model: "meta-llama/llama-3-8b-instruct",
+      model: "meta-llama/llama-3.3-70b-instruct:free",
       messages: [
         { role: "system", content: "You are a helpful assistant." },
         { role: "user", content: message }
@@ -20,6 +20,11 @@ exports.handler = async function(event, context) {
 
   return {
     statusCode: 200,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Headers": "Content-Type",
+      "Access-Control-Allow-Methods": "POST, OPTIONS"
+    },
     body: JSON.stringify(data),
   };
 };
